@@ -18,6 +18,7 @@
         #center {
             width: 90%;
             margin: 0 auto;
+            
         }
 
         #footer {
@@ -29,44 +30,57 @@
         #social {
             display: block;
         }
+        
 
-
-
-        div.gallery {
-            margin: 5px;
+        img{
             border-radius: 5px;
         }
-        div.gallery img {
-            width: 100%;
-            height: auto;
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
         }
-        .responsive{
+
+        .column {
+            flex: 30%;
+            max-width: 30%;
             padding: 0 6px;
-            float: left;
-            width: 24%
         }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+        }
+
         * {
             box-sizing: border-box;
         }
 
-        @media only screen and (max-width: 700px) {
-            .gallery {
-                width: 49%;
-                margin: 6px 0;
-            }
-
-        }
-
-        @media only screen and (max-width: 500px) {
-            .gallery {
-                width: 100%;
-            }
-
-        }
-
-        .clearfix:after{
+        .clearfix:after {
             display: table;
             clear: both;
+        }
+
+        a{
+            color: aliceblue;
+            font-size: medium;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -78,9 +92,9 @@
     <div id='linkbar'>
         <a href=""> Link 1</a>
         <a href=""> Link 2</a>
-        <a href=""> Link 3</a>
+        <a href="" > Link 3</a>
 
-        <a href=""> <span float="left">Link 4</span></a>
+        <a href="" style="float: right;">Link 4</a>
     </div>
     <br>
     <div id="text">
@@ -91,59 +105,26 @@
 
     </div>
     <br>
+    <div id="gallery">
+        <div class="row">
+            <div class="column">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+            </div>
+            <div class="column">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+            </div>
+            <div class="column">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+                <img src="https://picsum.photos/536/354" alt="Random image">
+            </div>
 
-    <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400"> </a>
-       <!-- <div class="desc">Add a description of the image here</div>  OPTIONAL DECRIPTION BOTTOM OF IMAGE--> 
+        </div>
     </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_5terre.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400"> </a>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_lights.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400"> </a>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400">
-        </a>
-    </div>
-    
-    <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400">
-        </a>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400">
-        </a>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400">
-        </a>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400">
-        </a>
-    </div>
-
-    <div class="gallery">
-        <a target="_blank" href="img_mountains.jpg">
-            <img src="https://picsum.photos/536/354" alt="Random image" width="600" height="400">
-        </a>
-    </div>
-    
     </div>
     <br>
     <br>
@@ -167,11 +148,3 @@
 </body>
 
 </html>
-
-<!-- .container {
-            display: flex;
-            max-width: 1200px;
-            width: 100%;
-            flex-wrap: wrap;
-            justify-content: center;
-        } -->
