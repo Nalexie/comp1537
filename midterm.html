@@ -1,0 +1,186 @@
+<html>
+
+<head>
+    <style>
+          * {
+            box-sizing: border-box;
+        }
+        #header {
+            text-align:center;
+        }
+
+        #linkbar {
+            color: black;
+            display: block;
+            padding: 10px;
+            position: relative;
+            width: 100%;
+
+
+        }
+    
+
+        a {
+            color: black;
+            font-size: medium;
+            text-decoration: none;
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            padding: 10px;
+
+
+        }
+        a:hover{ background-color: grey;}    
+
+        .text {
+            display: block;
+            text-align: center;
+        }
+
+        .saying {
+            display: block;
+            text-align: center;
+
+        }
+
+        #galley {
+            width: 90%;
+            margin: 0 auto;
+
+        }
+
+       
+
+        img {
+            border-radius: 5px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 4px;
+        }
+
+        .column {
+            flex: 30%;
+            max-width: 30%;
+            padding: 0 6px;
+        }
+
+        .column img {
+            margin-top: 8px;
+            vertical-align: middle;
+            width: 100%;
+        }
+
+        @media screen and (max-width: 800px) {
+            .column {
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .column {
+                flex: 100%;
+                max-width: 100%;
+            }
+            #linkbak{
+                display: none;
+                width: 0px;
+            }
+        }
+        #footer {
+            clear: both;
+            text-align: center;
+            background-color: #c7423f;
+            padding: 25px;
+
+        }
+        
+        #social {
+            display: block;
+            padding: auto;
+            
+            background-color: aliceblue;
+        }
+
+      
+
+        .clearfix:after {
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div id='linkbar'>
+         <div id="header"><h1>Leonardo Da vinci</h1></div>
+        <a href="" style="float: left;">Math</a>
+        <a href="" style="float: left;">Art</a>
+        <a href="" style="float: left;">Astronomy</a>     
+
+        <a href="" style="float: right;">Anatomy</a>
+        <a href="" style="float: right;">Inventions</a>
+        <a href="" style="float: right;">Wiki</a>
+
+    </div>
+    <br>
+    <div class="main">
+        <div id="text">
+
+            <p class="saying">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sunt maiores fuga fugiat a corrupti, odio
+                sapiente
+                laborum natus culpa asperiores!
+                <br>
+                <em>-Leonardo da vinci</em>
+            </p>
+
+        </div>
+        <br>
+        <div id="gallery">
+            <div class="row">
+                <div class="column">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg/800px-Lady_with_an_Ermine_-_Leonardo_da_Vinci_-_Google_Art_Project.jpg""><img>
+               
+            </div>
+            <div class=" column">
+                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, asperiores. Lorem ipsum
+                        dolor sit amet consectetur adipisicing elit. Esse placeat nam distinctio maiores, asperiores ad
+                        beatae deserunt dolores maxime accusantium delectus nemo blanditiis quos impedit, non nostrum,
+                        cumque laboriosam officiis?</p>
+
+                </div>
+                <div class="column">
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"><img>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="endnote">
+            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque amet, maiores ipsam numquam
+                nesciunt sit.</p>
+        </div>
+    </div>
+    </div>
+    <br>
+    <br>
+
+    <br>
+
+    <div id='footer' style="background-color: orangered;">      
+        <div id=" moreinfo"  style="margin: 15px;">
+        <a href="" style="color: orangered; background-color: aliceblue; margin: 15px;">
+            READ MORE ON WIKI
+        </a>
+
+    </div>
+    </div>
+</body>
+
+</html>
