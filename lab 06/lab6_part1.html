@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="calculator.js"></script>
+    <style>
+        .red{ background-color: #D09E83;}
+        .blue{
+            background-color: #D1BBD1;
+        }
+        .green{ background-color: #7D8985;}
+        .pantone{ background-color: #73859F;}
+    </style>
+</head>
+
+<body>
+    <lable for="a"> enter your first operand
+    </lable>
+    <input type="text" id="a">
+    <br>
+    <lable for="b"> enter your second operand
+    </lable>
+    <input type="text" id="b">
+    <br>
+    <button type="button" id="addition">+</button>
+    <button type="button" id="subtraction">-</button>
+    <button type="button" id="multiplication">*</button>
+    <button type="button" id="division">/</button>
+
+    <p>Result: <span id="p1"></span></p>
+
+    <h3>History</h3>
+    <div id="history"> </div>
+
+    <br>
+    <a href="lab6_homepage.html"> Go back to lab6 Page</a>
+    <a href="index.html" style="float: right;"> Lexie's Homepage! </a>
+</body>
+
+</html>
