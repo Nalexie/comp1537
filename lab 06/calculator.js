@@ -31,12 +31,17 @@ function division() {
     jQuery("#history").html(old +"<br>"+ "<span class='pantone'>"+a+"/"+b+"="+(a/b)+"<span>");
 }
 
+function increase() {
+    S("#history").css("font-size","20px");
+}
 
 function setup() {
     jQuery("#addition").click(addition);
     jQuery("#subtraction").click(subtraction);
     jQuery("#multiplication").click(multiplication);
     jQuery("#division").click(division);
+    jQuery("#increase").click(increase);
+    //jQuery("#decrease").click(decrease);
 }
 jQuery(document).ready(setup);
 
