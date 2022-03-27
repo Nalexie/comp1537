@@ -11,22 +11,23 @@ function paginate_menu() {
 }
 
 function process_response(data) {
+  console.log("starting process response")
   console.log(data);
   results_array = data;
-  // for (i = 0; i < data.results.length; i++) {
+  for (i = 0; i < data.results.length; i++) {
 
-  //     $("#results").append(data.results[i].original_title + "<br>");
+    $("#results").append(data.results[i].original_title + "<br>" + "<hr>");
 
-  //     $("#results").append(data.results[i].overview + "<br>");
-  //     x = data.results[i].poster_path
-  //     console.log(x)
-  //     image_link = `<img src = https://image.tmbd.org/t/p/w500/${x} >`
-  //     $("#results").append(image_link + '<br>');
+    $("#results").append(data.results[i].overview + "<br>");
+    x = data.results[i].poster_path
+    // console.log(x)
+    image_link = `<img src = "https://image.tmbd.org/t/p/w500/${0}" >` //change 0 to i
+    $("#results").append(image_link + "<br>");
 
-  //     z = `<button id="${data.results[i].backdrop_path}" class="backdrop_button"> backdrop image!</button>`
-  //     $("#results").append(z + "<br>");
+    z = `<button id="${data.results[i].backdrop_path}" class="backdrop_button"> See poster here!</button>`
+    $("#results").append("<br>" + z + "<br>");
 
-  // }
+  }
   paginate_menu();
 }
 
@@ -36,7 +37,7 @@ function call_ajax() {
   x = $("#keyword").val()
   $.ajax(
     {
-      "url": `https://api.themoviedb.org/3/movie/550?api_key=5ec893b3e3d707975e10b3b8f17d4f3b&query=${x}`,
+      "url": `https://api.themoviedb.org/3/search/movie?api_key=3a1c352ceb538e6d20367cf55e84803a&query=${x}`,
       "type": "GET",
       "success": process_response
     }
@@ -86,7 +87,7 @@ function next() {
 }
 function setup() {
   $("#search").click(call_ajax)
-  
+
   $("body").on("click", ".backdrop_button", display_back_drop)
 
   $("body").on("click", ".numbered_buttons_class", header_button);
