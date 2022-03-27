@@ -4,20 +4,33 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="lab8.js"></script>
-    <title>Alexie's Movie API</title>
+    <title>lab08 Movie API</title>
     <style>
-        #list_ {
+        #main_area_style {
             float: left;
             width: 50%;
+        }
+        #right_div {
+            float: right;
+            width: 50%;
+
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #bcb7a5;
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
 
 
-<body id="list_">
-    
-    <div id="main_area_style">
-
+<body>
+    <div id="list_">
         <div style="width:90%; float:left">
             Search TMBD by title
 
@@ -25,23 +38,22 @@
 
             <button id="search">Search</button>
             <br>
-           
-
-            <div id="results"> </div>
-
+            <hr>
         </div>
 
-    </div>
+        <div id="main_area_style">
+            <div id="results"> </div>
+        </div>
 
-    <div id="right_div">
+        <div id="right_div"></div>
     </div>
-
 
     <footer>
         <br>
-        <a href="../index.html" style="float: right;"> Lexie's Homepage! </a>
+        <a href="../index.html"> Lexie's Homepage! </a>
     </footer>
 
 </body>
+
 
 </html>

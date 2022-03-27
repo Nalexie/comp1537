@@ -2,7 +2,7 @@ function process_response(data) {
     console.log(data);
     for (i = 0; i < data.results.length; i++) {
 
-        $("#results").append(data.results[i].original_title + "<br>" + "<hr>");
+        $("#results").append(data.results[i].original_title +"<hr>" + "<br>");
 
         $("#results").append(data.results[i].overview + "<br>");
         x = data.results[i].poster_path
@@ -11,7 +11,7 @@ function process_response(data) {
         $("#results").append(image_link + "<br>");
 
         z = `<button id="${data.results[i].backdrop_path}" class="backdrop_button"> See poster here!</button>`
-        $("#results").append("<br>" + z + "<br>");
+        $("#results").append("<br>" + z + "<br>" + '<hr>' +"<br>");
 
     }
 

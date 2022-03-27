@@ -4,54 +4,77 @@
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="assignment02.js"></script>
-    <title>Lexie's Movie API</title>
+    <title>assignment02 Movie API</title>
     <style>
         #main_area_style {
             width: 50%;
             float: left;
+        }
+
+        #right_div {
+            float: right;
+            width: 50%;
+
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #bcb7a5;
+            color: white;
+            text-align: center;
         }
     </style>
 </head>
 
 
 <body>
-
-    <select name="page_size" id="page_size">
-        <option value="3">3</option>
-        <option value="5">5</option>
-        <option value="10">10</option>
-        <option value="20">20</option>
-    </select>
-
+    <div style="float:left">
+        <label for="page_size">Display:</label>
+        <select name="page_size" id="page_size">
+            <option value="3">3</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+        </select>
+    </div>
     <header>
-        <button id="first"> first </button>
-        <button id="prev">prev </button>
+        <button style="float:left" id="first"> first </button>
+        <button style="float:left" id="prev">prev </button>
 
-        <div id="numbered_buttons_id">
+        <div id="numbered_buttons_id" class="numbered_buttons" style="float:left">
             <!--adding to js or query later-->
         </div>
 
-        <button id="next">Next</button>
-        <button id="last"> last </button>
+        <button style="float:left"id="next">Next</button>
+        <button style="float:left"id="last"> last </button>
 
     </header>
 
-    <div id="main_area_style">
+    <div id="list_">
+        <br>
         <div style="width:90%; float:left">
-            Search Movie Title: 
-            <input id="keyword" type="text" value=""></input>
+            Search TMBD by title
+
+            <input id="keyword" type="text">
+
             <button id="search">Search</button>
-            <div id="results"></div>
+            <br>
+            <hr>
         </div>
 
-        <div id="right_div">
-
+        <div id="main_area_style">
+            <div id="results"> </div>
         </div>
+
+        <div id="right_div"></div>
     </div>
 
     <footer>
         <br>
-        <a href="../index.html" style="float: right;"> Lexie's Homepage! </a>
+        <a href="../index.html"> Lexie's Homepage! </a>
     </footer>
 
 </body>

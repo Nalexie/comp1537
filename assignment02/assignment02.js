@@ -3,7 +3,7 @@ results_array = null;
 
 function paginate_menu() {
   $("#numbered_buttons_id").empty();
-  last_page = Math.ceil(results_array.results.length / 3);
+  last_page = Math.ceil(results_array.results.length/3);
   for (i = 1; i <= last_page; i++) {
     x = `<button id="${i}" class="numbered_buttons"> ${i}</button> `;
     $("#numbered_buttons_id").append(x);
